@@ -4,9 +4,15 @@ import { useDispatch } from "react-redux";
 import PlayPause from "./PlayPause";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";
 
-export default function SongCard({ song, i }) {
+export default function SongCard({ data, i, song, isPlaying, activeSong }) {
 
-    const activeSong = "Test";
+    function handlePauseClick() {
+
+    }
+
+    function handlePlayClick() {
+
+    }
 
     return (
         <div className="flex flex-col w-60 p-4 rounded-lg bg-gray-50/10 bg-opacity-80 backdrop-blur-sm animate-slideup cursor-pointer">
@@ -15,10 +21,17 @@ export default function SongCard({ song, i }) {
         ${activeSong?.title === song.title ?
                         "flex bg-gray-900 bg-opacity-75" :
                         "hidden"}`}>
-                    <PlayPause />
+                    <PlayPause
+                        song={song}
+                        isPlaying={isPlaying}
+                        activeSong={activeSong}
+                        handlePause={handlePauseClick}
+                        handlePlay={handlePlayClick} />
                 </div>
                 <div className="w-full h-full rounded-lg">
-                    <img className="rounded object-contain" src={song.images?.coverart} alt={`${song.title} thumbnail`} />
+                    <img className="rounded object-contain"
+                        src={song.images?.coverart}
+                        alt={`${song.title} thumbnail`} />
                 </div>
             </div>
             <div className="flex flex-col gap-2">
