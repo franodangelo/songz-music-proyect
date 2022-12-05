@@ -1,17 +1,22 @@
-import React from "react";
 import { SongCard, Loader, Error } from "../components";
 import { genres } from "../assets/constants";
+import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 
 export default function Discover() {
+    const { data, isFetching, error } = useGetTopChartsQuery();
+    const genreTitle = "Pop";
+
     console.log(genres);
+    console.log(data);
+
     return (
         <div className="flex flex-col">
             <div className="flex sm:flex-row flex-col w-full mt-4 mb-10 justify-between items-center">
-                <h2 className="font-bold text-3xl text-white text-left">Discover</h2>
+                <h2 className="font-bold text-3xl text-white text-left">Discover {genreTitle}</h2>
                 <select name="" id="" value=""
-                    onChange={() => { }}
-                    className="mt-5 sm:mt-0 p-4 bg-black text-sm text-gray-300 rounded-lg outline-none">
-                    {genres.map(genre => {
+                    onChange={() => {}}
+                    className="mt-5 sm:mt-0 p-4 bg-gray-900 text-sm text-gray-300 rounded-lg outline-none">
+                    {genres.map((genre) => {
                         return <option key={genre.value} value={genre.value}>{genre.title}</option>
                     })}
                 </select>
