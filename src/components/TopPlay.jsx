@@ -13,7 +13,7 @@ import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 
 function TopChartCard({ song, i, isPlaying, activeSong, handlePauseClick, handlePlayClick }) {
     return (
-        <div className="flex w-full mb-2 py-2 px-4 items-center rounded-lg cursor pointer">
+        <div className="flex w-full mb-2 py-2 px-4 items-center rounded-lg cursor-pointer hover:bg-slate-500">
             <h3 className="mr-4 font-bold text-gray-100">#{i + 1}</h3>
             <div className="flex flex-1 justify-between items-center">
                 <img src={song?.images.coverart} alt={song?.title} className="w-16 h-16 rounded-lg" />
@@ -30,8 +30,8 @@ function TopChartCard({ song, i, isPlaying, activeSong, handlePauseClick, handle
                 isPlaying={isPlaying}
                 activeSong={activeSong}
                 song={song}
-                handlePauseClick={handlePauseClick}
-                handlePlayClick={handlePlayClick} />
+                handlePause={handlePauseClick}
+                handlePlay={handlePlayClick} />
         </div>
     )
 }
@@ -99,13 +99,10 @@ export default function TopPlay() {
                     {topPlays?.map((song, i) => (
                         <SwiperSlide
                             key={song?.key}
-                            style={{ width: "25%", height: "auto" }}
+                            style={{ width: "20%", height: "auto" }}
                             className="rounded-full shadow-lg animate-slideright">
                             <Link to={`/artists/${song?.artists[0].adamid}`}>
-                                <img
-                                    src={song?.images.background}
-                                    alt="name"
-                                    className="w-full rounded-full object-cover" />
+                                <img src={song?.images.background} alt="name" className="w-full rounded-full object-cover" />
                             </Link>
                         </SwiperSlide>
                     ))}
