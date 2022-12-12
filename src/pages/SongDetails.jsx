@@ -23,7 +23,6 @@ export default function SongDetails() {
 
     if (isFetchingSongDetails || isFetchingRelatedSongs) return <Loader title="Searching song details..." />;
     if (error) return <Error />;
-    console.log(error);
 
     return (
         <div className="flex flex-col">
