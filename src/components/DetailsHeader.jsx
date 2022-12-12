@@ -7,14 +7,13 @@ export default function DetailsHeader({ artistId, artistData, songData }) {
     return (
         <div className="relative flex flex-col w-full">
             <div className="w-full h-[120px] sm:h-[200px] bg-gradient-to-l from-transparent to-slate-900" />
-            <div className="absolute flex inset-0 items-center">
-                <img
-                    className="w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] object-cover rounded-full border-2 shadow-lg shadow-slate-900"
+            <div className="absolute flex inset-0 m-2 items-center">
+                <img alt="art"
+                    className="w-28 sm:w-48 h-28 sm:h-48 object-cover rounded-full border-2 shadow-xl shadow-slate-900"
                     src={artistId ?
                         artistIfo?.artwork?.url.replace(`{w}`, `400`).replace(`{h}`, `400`) :
-                        songData?.images?.coverart}
-                    alt="art" />
-                <div className="ml-">
+                        songData?.images?.coverart} />
+                <div className="ml-6">
                     <p className="mb-2 text-gray-400">
                         {artistId ? artistIfo?.genreNames[0] : songData?.genres?.primary}
                     </p>
@@ -28,7 +27,6 @@ export default function DetailsHeader({ artistId, artistData, songData }) {
                     )}
                 </div>
             </div>
-            <div className="w-full h-24 sm:h-44" />
         </div>
     )
 }
