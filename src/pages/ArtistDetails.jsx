@@ -1,5 +1,5 @@
-const ArtistDetails = () => (
-  <div>ArtistDetails</div>
-);
-
-export default ArtistDetails;
+export default function ArtistDetails() {
+  return (
+    <div>ArtistDetails</div>
+  )
+}
