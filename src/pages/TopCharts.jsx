@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useSelector } from "react-redux";
 import { SongCard, Loader, Error } from "../components";
 import { useGetTopChartsQuery } from "../redux/services/shazamCore";
