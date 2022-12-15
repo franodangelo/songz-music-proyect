@@ -101,9 +101,9 @@ export default function TopPlay() {
                             key={song?.key}
                             style={{ width: "20%", height: "auto" }}
                             className="rounded-full shadow-lg animate-slideright">
-                            <Link to={`/artists/${song?.artists[0].adamid}`}>
+                            {/* <Link to={`/artists/${song?.artists[0].adamid}`}> */}
                                 <img src={song?.images.background} alt="name" className="w-full rounded-full object-cover" />
-                            </Link>
+                            {/* </Link> */}
                         </SwiperSlide>
                     ))}
                 </Swiper>
