@@ -19,12 +19,12 @@ export default function Discover() {
             <div className="flex sm:flex-row flex-col w-full mt-4 mb-10 justify-between items-center">
                 <h2 className="font-bold text-3xl text-white text-left">Discover {genreTitle}</h2>
                 <select
-                    name=""
-                    id=""
+                    name="songGenres"
+                    id="songGenres"
                     value={genreListId || "POP"}
                     onChange={(e) => dispatch(selectGenreListId(e.target.value))}
                     className="mt-6 sm:mt-0 p-4 bg-gray-900 text-sm text-gray-300 rounded-lg outline-none">
-                    {genres.map((genre) => (
+                    {genres.map(genre => (
                         <option key={genre.value} value={genre.value}>{genre.title}</option>
                     ))}
                 </select>
