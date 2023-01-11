@@ -12,7 +12,7 @@ export default function Loader({ title }) {
         wrapperStyle
         wrapperClass
       />
-      <h1 className="mt-2 font-bold text-2xl text-gray-100">{title || "Loading..."}</h1>
+      <h1 className="mt-2 font-bold text-2xl text-slate-100">{title || "Loading..."}</h1>
     </div>
   )
 }

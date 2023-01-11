@@ -23,7 +23,7 @@ export default function AroundYou() {
 
     return (
         <div className="flex flex-col">
-            <div className="flex flex-col mt-4 mb-10 text-gray-100">
+            <div className="flex flex-col mt-4 mb-10 text-slate-100">
                 <span className="font-black">{country}</span>
                 <h2 className="font-bold text-3xl">Around you</h2>
             </div>

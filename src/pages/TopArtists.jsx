@@ -10,7 +10,7 @@ export default function TopArtists() {
 
     return (
         <div className="flex flex-col">
-            <h2 className="mt-4 mb-10 font-bold text-3xl text-gray-100 ">Top artists right now</h2>
+            <h2 className="mt-4 mb-10 font-bold text-3xl text-slate-100 ">Top artists right now</h2>
             <div className="flex flex-wrap justify-center sm:justify-start gap-8">
                 {data?.map((track) => (
                     <ArtistCard

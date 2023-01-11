@@ -14,15 +14,15 @@ export default function DetailsHeader({ artistId, artistData, songData }) {
                         artistIfo?.artwork?.url.replace(`{w}`, `400`).replace(`{h}`, `400`) :
                         songData?.images?.coverart} />
                 <div className="ml-6">
-                    <p className="mb-2 text-gray-400">
+                    <p className="mb-2 text-slate-400">
                         {artistId ? artistIfo?.genreNames[0] : songData?.genres?.primary}
                     </p>
-                    <p className="font-bold text-xl sm:text-2xl text-gray-100">
+                    <p className="font-bold text-xl sm:text-2xl text-slate-100">
                         {artistId ? artistIfo?.name : songData?.title}
                     </p>
                     {!artistId && (
                         <Link to={`/artists/${songData?.artists[0].adamid}`}>
-                            <p className="mt-2 text-gray-400">{songData?.subtitle}</p>
+                            <p className="mt-2 text-slate-400">{songData?.subtitle}</p>
                         </Link>
                     )}
                 </div>
