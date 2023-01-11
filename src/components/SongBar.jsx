@@ -24,7 +24,7 @@ const SongBar = ({ song, i, artistId, isPlaying, activeSong, handlePauseClick, h
             {song?.attributes?.name}
           </p>
         )}
-        <p className="text-base text-slate-300 mt-1">
+        <p className="text-base text-gray-300 mt-1">
           {artistId ? song?.attributes?.albumName : song?.subtitle}
         </p>
       </div>

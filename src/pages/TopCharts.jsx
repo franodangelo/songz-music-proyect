@@ -12,7 +12,7 @@ export default function TopCharts() {
 
     return (
         <div className="flex flex-col">
-            <h2 className="mt-4 mb-10 font-bold text-3xl text-slate-100 ">This are the top charts</h2>
+            <h2 className="mt-4 mb-10 font-bold text-3xl text-gray-100 ">This are the top charts</h2>
             <div className="flex flex-wrap justify-center sm:justify-start gap-8">
                 {data?.map((song, i) => (
                     <SongCard

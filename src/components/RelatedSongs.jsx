@@ -3,7 +3,7 @@ import SongBar from "./SongBar";
 export default function RelatedSongs({ data, artistId, isPlaying, activeSong, handlePauseClick, handlePlayClick }) {
     return (
         <div className="flex flex-col">
-            <h1 className="font-bold text-3xl text-slate-100">Related songs</h1>
+            <h1 className="font-bold text-3xl text-gray-100">Related songs</h1>
             <div className="flex flex-col w-full mt-6">
                 {
                     data?.map((song, i) => (

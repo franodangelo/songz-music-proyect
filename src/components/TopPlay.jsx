@@ -14,15 +14,15 @@ import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 function TopChartCard({ song, i, isPlaying, activeSong, handlePauseClick, handlePlayClick }) {
     return (
         <div className="flex w-full mb-2 py-2 px-4 items-center rounded-lg cursor-pointer hover:bg-slate-500">
-            <h3 className="mr-4 font-bold text-slate-100">#{i + 1}</h3>
+            <h3 className="mr-4 font-bold text-gray-100">#{i + 1}</h3>
             <div className="flex flex-1 justify-between items-center">
                 <img src={song?.images.coverart} alt={song?.title} className="w-16 h-16 rounded-lg" />
                 <div className="flex flex-1 flex-col mx-4 justify-center">
                     <Link to={`/songs/${song.key}`}>
-                        <p className="font-bold text-xl text-slate-100">{song?.title}</p>
+                        <p className="font-bold text-xl text-gray-100">{song?.title}</p>
                     </Link>
                     <Link to={`/artists/${song?.artists[0].adamid}`}>
-                        <p className="mt-1 font-semibold text-slate-300">{song?.subtitle}</p>
+                        <p className="mt-1 font-semibold text-gray-300">{song?.subtitle}</p>
                     </Link>
                 </div>
             </div>
@@ -62,9 +62,9 @@ export default function TopPlay() {
         <div ref={divRef} className="flex flex-1 flex-col max-w-full xl:max-w-[520px] ml-0 xl:ml-6 mb-6 xl:mb-0">
             <div className="flex flex-col w-full">
                 <div className="flex justify-between items-center">
-                    <h2 className="font-semibold text-2xl text-slate-100">Top charts</h2>
+                    <h2 className="font-semibold text-2xl text-gray-100">Top charts</h2>
                     <Link to="/top-charts">
-                        <p className="text-slate-300 cursor-pointer">See more</p>
+                        <p className="text-gray-300 cursor-pointer">See more</p>
                     </Link>
                 </div>
                 <div className="flex flex-col mt-4 gap-2">
@@ -83,9 +83,9 @@ export default function TopPlay() {
 
             <div className="flex flex-col w-full mt-8">
                 <div className="flex justify-between items-center">
-                    <h2 className="font-semibold text-2xl text-slate-100">Top artists</h2>
+                    <h2 className="font-semibold text-2xl text-gray-100">Top artists</h2>
                     <Link to="/top-artists">
-                        <p className="text-slate-300 cursor-pointer">See more</p>
+                        <p className="text-gray-300 cursor-pointer">See more</p>
                     </Link>
                 </div>
                 <Swiper

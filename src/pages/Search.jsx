@@ -15,7 +15,7 @@ export default function Search() {
 
   return (
     <div className="flex flex-col">
-      <h2 className="mt-4 mb-10 font-bold text-3xl text-slate-100 ">Your results for <span>{searchTerm}</span></h2>
+      <h2 className="mt-4 mb-10 font-bold text-3xl text-gray-100 ">Your results for <span>{searchTerm}</span></h2>
       <div className="flex flex-wrap justify-center sm:justify-start gap-8">
         {songs?.map((song, i) => (
           <SongCard

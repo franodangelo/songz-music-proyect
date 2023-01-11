@@ -19,8 +19,8 @@ export default function SongCard({ data, i, song, isPlaying, activeSong }) {
     return (
         <div className="flex flex-col w-60 pb-4 rounded-lg bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup cursor-pointer">
             <div className="relative w-full h-full group">
-                <div className={`absolute inset-0 justify-center items-center bg-slate-900 bg-opacity-50 
-                group-hover:flex ${activeSong?.title === song.title ? "flex bg-slate-900 bg-opacity-75" : "hidden"}`}>
+                <div className={`absolute inset-0 justify-center items-center bg-gray-900 bg-opacity-50 
+                group-hover:flex ${activeSong?.title === song.title ? "flex bg-gray-900 bg-opacity-75" : "hidden"}`}>
                     <PlayPause
                         song={song}
                         isPlaying={isPlaying}
@@ -34,10 +34,10 @@ export default function SongCard({ data, i, song, isPlaying, activeSong }) {
             </div>
             <div className="flex flex-col mt-2 px-2">
                 <Link to={`/songs/${song?.key}`}>
-                    <h2 className="font-semibold text-xl text-slate-100 truncate">{song.title}</h2>
+                    <h2 className="font-semibold text-xl text-gray-100 truncate">{song.title}</h2>
                 </Link>
                 {/* <Link to={song.artists ? `/artists/${song?.artists[0]?.adamid}` : "/top/artists"}> */}
-                <h3 className="text-sm text-slate-400">{song.subtitle}</h3>
+                <h3 className="text-sm text-gray-400">{song.subtitle}</h3>
                 {/* </Link> */}
             </div>
         </div>

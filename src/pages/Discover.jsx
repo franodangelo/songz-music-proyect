@@ -23,7 +23,7 @@ export default function Discover() {
                     id="songGenres"
                     value={genreListId || "POP"}
                     onChange={(e) => dispatch(selectGenreListId(e.target.value))}
-                    className="mt-6 sm:mt-0 p-4 bg-slate-900 text-sm text-slate-300 rounded-lg outline-none">
+                    className="mt-6 sm:mt-0 p-4 bg-gray-900 text-sm text-gray-300 rounded-lg outline-none">
                     {genres.map(genre => (
                         <option key={genre.value} value={genre.value}>{genre.title}</option>
                     ))}
