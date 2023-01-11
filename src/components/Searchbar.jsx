@@ -15,7 +15,7 @@ export default function Searchbar() {
     return (
         <form autoComplete="off" onSubmit={handleSubmit} className="p-2 text-slate-400 focus-within:text-slate-600">
             <label htmlFor="search-field" className="sr-only">Search all songs</label>
-            <div className="flex items-center">
+            <div className="flex items-center border border-slate-500 rounded-xl">
                 <FiSearch className="w-4 h-4 ml-4" />
                 <input
                     className="flex-1 p-4 border-none outline-none text-slate-100 bg-transparent placeholder-slate-500"
