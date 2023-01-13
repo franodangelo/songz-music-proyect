@@ -100,9 +100,12 @@ export default function TopPlay() {
                         <SwiperSlide
                             key={song?.key}
                             style={{ width: "20%", height: "auto" }}
-                            className="rounded-full shadow-lg animate-slideright">
+                            className="mb-4 animate-slideright">
                             {/* <Link to={`/artists/${song?.artists[0].adamid}`}> */}
-                            <img src={song?.images.background} alt="name" className="w-full rounded-full object-cover" />
+                            <div className="flex flex-col gap-2">
+                                <img src={song?.images.background} alt="name" className="w-full rounded-full object-cover shadow-md" />
+                                <p className="text-sm text-center text-white truncate">{song.subtitle}</p>
+                            </div>
                             {/* </Link> */}
                         </SwiperSlide>
                     ))}
