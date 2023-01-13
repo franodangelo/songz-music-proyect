@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import PlayPause from "./PlayPause";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";
+import { MdImageNotSupported } from "react-icons/md";
 
 export default function SongCard({ data, i, song, isPlaying, activeSong }) {
 
@@ -28,9 +29,14 @@ export default function SongCard({ data, i, song, isPlaying, activeSong }) {
                         handlePause={handlePauseClick}
                         handlePlay={handlePlayClick} />
                 </div>
-                <img className="rounded-t-lg object-contain"
-                    src={song.images?.coverart}
-                    alt={`${song.title} thumbnail`} />
+                {song.images?.coverart ?
+                    <img className="rounded-t-lg object-contain"
+                        src={song.images?.coverart}
+                        alt={`${song.title} thumbnail`} /> :
+                    <div className="flex flex-col w-full h-56 items-center justify-center rounded-l">
+                        <MdImageNotSupported className="w-full h-40 text-gray-500" />
+                        <p className="text-sm text-gray-200">Image not found</p>
+                    </div>}
             </div>
             <div className="flex flex-col mt-2 px-2">
                 <Link to={`/songs/${song?.key}`}>
